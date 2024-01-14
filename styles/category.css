@@ -1,0 +1,36 @@
+.category-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   padding-left: 10px;
+    position: fixed;
+    top: 55px;
+    left: 251px;
+    right: 0;
+    height: 60px;
+
+    background-color: white;
+    z-index: 90;
+    flex-shrink: 0;
+}
+
+.category{
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left:10px;
+    padding-right:10px;
+    flex-shrink: 0;
+    background-color: rgb(220,220,220);
+    transition: 0.15s ;
+}
+
+
+.category:hover{
+    background-color: black;
+    color: white;
+    
+}

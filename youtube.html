@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        </title>
+        <script src="Jquery-3.6.1.min.js"> </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" 
+        rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/video.css">
+        <link rel="stylesheet" href="styles/sidebar.css">
+        <link rel="stylesheet" href="styles/category.css">
+
+
+    </head>
+    <body>
+        <!--THIS IS A COMMENT IN HTML-->
+
+        <header class="header">
+            <div class="left-section">
+                <img class="hamburger-menu" src="thumbnails/icons/hamburger-menu.svg">
+                <img class="youtube-logo" src="thumbnails/icons/youtube-logo.svg">
+        </div>
+
+
+
+        <div class="middle-section">
+                <input id="search" type="text" class="search-bar" placeholder="Search">
+                <button id="search-button" onclick="searching()" class="search-button">
+
+
+            <script>
+                var input= document.getElementById("search");
+                input.addEventListener("keypress", function(event){
+                    if(event.key=="Enter"){
+                        document.getElementById("search-button").click();
+                    }
+
+                });
+                function searching()
+                {
+                    var c=document.getElementById("search").value;
+                    var b="https://www.youtube.com/results?search_query="+c;
+                    window.location.href=b;
+                }    
+            </script>
+
+
+
+
+
+
+
+                    <img class="searching-icon" src="thumbnails/icons/search.svg">
+                    <div class="tooltip">Search</div>
+                </button>
+                <button class="voice-search-button">
+                    <img class="voice-search-icon" src="thumbnails/icons/voice-search-icon.svg">
+                    <div class="tooltip">Search with your voice</div>
+                </button>
+            </div>
+
+
+
+
+        <div class="right-section">
+            <div class="upload-icon-container">
+                <img class="upload-icon" src="thumbnails/icons/upload.svg">
+                <div class="tooltip">Create</div>
+            </div>
+            <div class="youtube-apps-icon-container">
+                <img class="youtube-apps-icon" src="thumbnails/icons/youtube-apps.svg">
+                <div class="tooltip">Apps</div>
+            </div>
+            <div class="notifications-icon-container">
+                <img class="notifications-icon" src="thumbnails/icons/notifications.svg">
+                <div class="notifications-count">3</div>
+                <div class="tooltip">Notifications</div>
+            </div>
+
+            <div class="user-picture-container">
+                <img class="current-user-picture" src="thumbnails/unnamed.jpg">
+                <div class="tooltip">Profile Picture</div>
+            </div>
+
+        </div>
+
+
+
+
+    </header>
+    <div class="category-container">
+        <div class="category">All</div>
+        <div class="category">Music</div>
+        <div class="category">JavaScript</div>
+        <div class="category">Computer Programming</div>
+        <div class="category">Indie Music</div>
+        <div class="category">Solo</div>
+        <div class="category">Pop Rock</div>
+        <div class="category">Professional Wrestling</div>
+        <div class="category">Recently Watched</div>
+        <div class="category">New to you</div>
+        
+    </div>        
+        
+
+    
+        
+        <nav class="sidebar">
+            <div class="sidebar-link">
+                <div class="leftside"><img src="thumbnails/icons/home.svg"></div>
+                <div class="rightside">Home</div>
+            </div>
+            <div class="sidebar-link">
+                <div class="leftside"><img class="bgremove" src="thumbnails/icons/oksvg.svg"></div>
+                <div class="rightside">Shorts</div>
+            </div>
+            <div class="sidebar-link">
+                <div class="leftside"><img src="thumbnails/icons/subscriptions.svg"></div>
+                <div class="rightside">Subscriptions</div>
+            </div>
+            <hr class="sideline">
+            <div class="sidebar-link">
+                <img style="width:50px;
+                            height:20px;
+                            mix-blend-mode: multiply;" 
+                     src="thumbnails/icons/you.jpg">
+            </div>
+            
+
+
+            <div class="sidebar-link">
+                <div class="leftside"><img class="bgremove" src="thumbnails/icons/your-channel.jpg"></div>
+                <div class="rightside">Your channel</div>
+            </div>
+            <div class="sidebar-link">
+                <div class="leftside"><img class="bgremove" src="thumbnails/icons/history.jpg"></div>
+                <div class="rightside" >History</div>
+            </div>
+            <div class="sidebar-link">
+                <div class="leftside"><img class="bgremove" src="thumbnails/icons/your-videos.jpg"></div>
+                <div class="rightside" >Your videos </div>
+            </div>
+            <div class="sidebar-link">
+                <div class="leftside"><img class="bgremove" src="thumbnails/icons/your-movies.jpg"></div>
+                <div class="rightside" >Your movies</div>
+            </div>
+            <div class="sidebar-link">
+                <div class="leftside"><img class="bgremove" src="thumbnails/icons/watch-later.jpg"></div>
+                <div class="rightside" >Watch Later</div>
+            </div>
+            <div class="sidebar-link">
+                <div class="leftside"><img class="bgremove" src="thumbnails/icons/your-clips.jpg"></div>
+                <div class="rightside" >Your clips </div>
+            </div>
+
+            
+            <div class="sidebar-link" id="show-more">    
+                <div class="leftside"><img class="bgremove" src="thumbnails/icons/show-more.jpg"></div>
+                <div class="rightside">Show more</div>
+                </div>
+
+
+                <div class="sidebar-link" id="show-inside1">
+                    <div class="leftside"><img class="bgremove" src="thumbnails/icons/liked-videos.jpg"></div>
+                    <div class="rightside" >Liked Videos </div>
+                </div>
+
+                <div class="sidebar-link" id="show-inside2">
+                    <div class="leftside"><img class="bgremove" src="thumbnails/icons/playlist.jpg"></div>
+                    <div class="rightside" >.. </div>
+                </div>
+
+                <div class="sidebar-link" id="show-inside3">
+                    <div class="leftside"><img class="bgremove" src="thumbnails/icons/playlist.jpg"></div>
+                    <div class="rightside" >Playlist 1 </div>
+                </div>
+
+
+                <div class="sidebar-link" id="show-inside4">
+                    <div class="leftside"><img class="bgremove" src="thumbnails/icons/show-less.jpg"></div>
+                    <div class="rightside" >Show Less </div>
+                </div>
+
+
+
+            
+                <script> 
+                $("#show-inside1, #show-inside2, #show-inside3, #show-inside4").hide();
+                
+                $(document).ready(function() { 
+                  $("#show-more").click(function() { 
+                    $("#show-more").hide();
+                    $("#show-inside1, #show-inside2, #show-inside3, #show-inside4").show();  
+                  }); 
+                }); 
+
+
+                $(document).ready(function(){
+                    $("#show-inside4").click(function() {
+                        $("#show-more").show();
+                        $("#show-inside1, #show-inside2, #show-inside3, #show-inside4").hide();
+                    })
+                })
+                </script> 
+
+
+
+            
+
+
+            
+
+
+
+
+
+
+
+
+
+            <hr class="sideline">
+            <div class="sidebar-link">
+                <div class="rightside" style="
+                    margin-left: 22px;
+                    font-weight: 500;
+                    font-size: 17px;"
+                    >Subscriptions</div>
+            </div>
+
+
+            <div class="sidebar-link">
+                <div class="leftside"></div>
+                <div class="rightside" ></div>
+            </div>
+
+            <div class="sidebar-link">
+                <div class="leftside"></div>
+                <div class="rightside" ></div>
+            </div>
+
+            <div class="sidebar-link">
+                <div class="leftside"></div>
+                <div class="rightside" ></div>
+            </div>
+
+            <div class="sidebar-link">
+                <div class="leftside"></div>
+                <div class="rightside" ></div>
+            </div>
+
+            <div class="sidebar-link">
+                <div class="leftside"></div>
+                <div class="rightside" ></div>
+            </div>
+
+            <div class="sidebar-link">
+                <div class="leftside"></div>
+                <div class="rightside" ></div>
+            </div>
+
+
+            
+
+           
+            
+
+        </nav>
+        
+    <main>
+        <section class="video-grid">
+            <a href="https://www.youtube.com/watch?v=Ip6cw8gfHHI">
+            <div class="video-preview">
+                
+            
+                <div class="thumbnail-row">
+
+                   
+                    <img class="thumbnail" src="thumbnails/thumbs/firstthumb.webp">
+                    <div class="video-time">3:42</div>
+                
+                </div>
+    
+    
+                <div class="video-info-grid">
+                        <div class="channel-picture">
+                                <img class="profile-picture" src="thumbnails/profiles/profile-1.jpg">
+                        </div>
+    
+                        <div class="video-info">
+                            <p class="video-title">
+                                d4vd - Here With Me [Official Music Video]
+                            </p>
+                            <p class="video-author">
+                                d4vd &#10003;
+                            </p>
+                            <p class="video-stats">
+                                88M views &#183; 1 year ago
+                            </p>
+                        </div>
+                </div>
+    
+    
+            </div>   
+        </a>       
+    
+        <a href="https://www.youtube.com/watch?v=G3e-cpL7ofc&t=22058s">
+            <div class="video-preview">
+                
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbs/secondthumb.webp">
+                    <div class="video-time">6:31:24</div>
+                </div>
+    
+    
+                <div class="video-info-grid">
+                        <div class="channel-picture">
+                                <img class="profile-picture" src="thumbnails/profiles/profile-2.jpg">
+                                </div>
+    
+                        <div class="video-info">
+                            <p class="video-title">
+                            HTML & CSS Full Course - Beginner to Pro
+                            </p>
+                            <p class="video-author">
+                                SuperSimpleDev &#10003;
+                            </p>
+                            <p class="video-stats">
+                                7.9M views &#183; 1 year ago
+                               
+                            </p>
+                        </div>
+                </div>
+    
+    
+            </div>   
+        </a>  
+            
+            
+        <a href="https://www.youtube.com/watch?v=zWi0LTbTfk0&t=61s">
+            <div class="video-preview">
+                
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbs/thirdthumb.webp">
+                    <div class="video-time">10:00:00</div>
+                </div>
+    
+    
+                <div class="video-info-grid">
+                        <div class="channel-picture">
+                                <img class="profile-picture" src="thumbnails/profiles/profile-3.jpg">
+                        </div>
+    
+                        <div class="video-info">
+                            <p class="video-title">
+                            I have no enemies 10hours
+                            </p>
+                            <p class="video-author">
+                                10Hour
+                            </p>
+                            <p class="video-stats">
+                                919k views &#183; 6 months ago
+                            </p>
+                        </div>
+                </div>
+    
+    
+            </div> 
+        </a>
+                    
+             
+        <a href="https://www.youtube.com/watch?v=Xzv84ZdtlE0&t=117s">
+            <div class="video-preview">
+                
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbs/fourththumb.webp">
+                    <div class="video-time">32:52</div>
+                </div>
+    
+    
+                <div class="video-info-grid">
+                        <div class="channel-picture">
+                                <img class="profile-picture" src="thumbnails/profiles/profile-4.jpg">
+                        </div>
+    
+                        <div class="video-info">
+                            <p class="video-title">
+                            The Real Story of Oppenheimer
+                            </p>
+                            <p class="video-author">
+                                Veritasium &#10003;
+                            </p>
+                            <p class="video-stats">
+                                10M views &#183; 5 months ago
+                            </p>
+                        </div>
+                </div>
+    
+    
+            </div>  
+        </a>        
+    
+        <a href="https://www.youtube.com/watch?v=IXdNnw99-Ic">
+            <div class="video-preview">
+                
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbs/fifththumb.webp">
+                    <div class="video-time">4:54</div>
+                </div>
+    
+    
+                <div class="video-info-grid">
+                        <div class="channel-picture">
+                                <img class="profile-picture" src="thumbnails/profiles/profile-5.jpg">
+                        </div>
+    
+                        <div class="video-info">
+                            <p class="video-title">
+                            Pink Floyd - Wish You Were Here
+                            </p>
+                            <p class="video-author">
+                                chartrand
+                            </p>
+                            <p class="video-stats">
+                                246M views &#183; 17 years ago
+                            </p>
+                        </div>
+                </div>
+    
+    
+            </div>    
+        </a>      
+    
+        <a href="https://www.youtube.com/watch?v=M5VXCixTdEg">
+            <div class="video-preview">
+                
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbs/sixththumb.webp">
+                    <div class="video-time">0:36</div>
+                </div>
+    
+    
+                <div class="video-info-grid">
+                        <div class="channel-picture">
+                                <img class="profile-picture" src="thumbnails/profiles/profile-6.jpg">
+                        </div>
+    
+                        <div class="video-info">
+                            <p class="video-title">
+                            : 
+                            </p>
+                            <p class="video-author">
+                                piot
+                            </p>
+                            <p class="video-stats">
+                                6.9M views &#183; 1 years ago
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=0-MtPBap960&t=6s">
+            <div class="video-preview">
+                
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbs/thumb-7.webp">
+                    <div class="video-time">14:20</div>
+                </div>
+    
+    
+                <div class="video-info-grid">
+                        <div class="channel-picture">
+                                <img class="profile-picture" src="thumbnails/profiles/profile-7.jpg">
+                        </div>
+    
+                        <div class="video-info">
+                            <p class="video-title">
+                            EXOTIC CARS are MILLIONAIRE KILLERS
+                            </p>
+                            <p class="video-author">
+                                Grant Cardone &#10003;
+                            </p>
+                            <p class="video-stats">
+                                17K views &#183; 3 days ago
+                            </p>
+                        </div>
+                </div>
+    
+    
+            </div>
+        </a>
+
+
+
+
+<a href="https://www.youtube.com/watch?v=tHS3qxU_3RE&t=11s">
+            <div class="video-preview">
+                
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbs/thumb-8.webp">
+                    <div class="video-time">14:20</div>
+                </div>
+    
+    
+                <div class="video-info-grid">
+                        <div class="channel-picture">
+                                <img class="profile-picture" src="thumbnails/profiles/profile-8.jpg">
+                        </div>
+    
+                        <div class="video-info">
+                            <p class="video-title">
+                            2024 Tech I'm Ready For!
+                            </p>
+                            <p class="video-author">
+                                Marques Brownlee &#10003;
+                            </p>
+                            <p class="video-stats">
+                                3.4 views &#183; 6 months ago
+                            </p>
+                        </div>
+                </div>
+    
+    
+            </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=wVrqFnkZr8U">
+            <div class="video-preview">
+                
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbs/thumb-9.webp">
+                    <div class="video-time">14:20</div>
+                </div>
+    
+    
+                <div class="video-info-grid">
+                        <div class="channel-picture">
+                                <img class="profile-picture" src="thumbnails/profiles/profile-9.jpg">
+                        </div>
+    
+                        <div class="video-info">
+                            <p class="video-title">
+                            Here With Me - d4vd - Fingerstyle Guitar Tutorial + TAB & Lyrics
+                            </p>
+                            <p class="video-author">
+                                yunus guitarist &#10003;
+                            </p>
+                            <p class="video-stats">
+                                220K views &#183; 10 months ago
+                            </p>
+                        </div>
+                </div>
+    
+    
+            </div>
+        </a>
+
+           
+
+
+        </section>
+    </main>
+    </body>
+</html>
